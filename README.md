@@ -4,10 +4,8 @@ This repository contains the MATLAB implementation of Adaptive Cooperative
 Mirage Search Optimization (ACMSO) used for a three-dimensional UAV path
 planning example.
 
-Working English paper title (confirm before publication):
-**Three-Dimensional UAV Path Planning Based on Adaptive Cooperative Mirage
-Search Optimization**. The current Chinese title is
-**基于自适应协同蜃景搜索优化算法的三维无人机路径规划**.
+Paper title: **Three-Dimensional UAV Path Planning Based on Adaptive
+Cooperative Mirage Search Optimization**.
 
 The repository is a compact runnable package containing only ACMSO and the
 files required by the UAV example. Benchmark algorithms and experimental
@@ -73,10 +71,3 @@ ACMSO-UAV-MATLAB/
 `IMSO.m` is the historical filename of the ACMSO implementation used in the
 research workspace. It is retained unchanged so that the released algorithm
 can be traced back to the experimental source.
-
-## Publication status
-
-This is a local release candidate. An open-source license has deliberately not
-been selected yet. Before publishing the repository, review and resolve the
-items in `SOURCE_AND_LICENSE_REVIEW.md`, then add the chosen license and final
-paper citation.
