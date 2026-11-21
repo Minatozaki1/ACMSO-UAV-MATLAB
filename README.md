@@ -9,11 +9,9 @@ Working English paper title (confirm before publication):
 Search Optimization**. The current Chinese title is
 **基于自适应协同蜃景搜索优化算法的三维无人机路径规划**.
 
-The repository is organized as a small runnable package, following the
-single-entry style of the SPSO project without copying its algorithm,
-repository text, or license. Only ACMSO and the files required by the UAV
-example are included. Benchmark algorithms and experimental archives are
-intentionally excluded.
+The repository is a compact runnable package containing only ACMSO and the
+files required by the UAV example. Benchmark algorithms and experimental
+archives are intentionally excluded.
 
 ## Requirements
 
@@ -33,8 +31,8 @@ validation = validate_repository;
 results = ACMSO_MAIN;
 ```
 
-On first use, `ACMSO_MAIN` calls `setup_terrain`, which downloads a pinned
-terrain file from its upstream SPSO repository and verifies its SHA-256 hash.
+On first use, `ACMSO_MAIN` calls `setup_terrain`, which downloads the required
+terrain file from its pinned third-party source and verifies its SHA-256 hash.
 The terrain is not tracked by this repository.
 
 The example retains the research configuration:

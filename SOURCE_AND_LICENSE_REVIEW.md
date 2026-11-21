@@ -19,24 +19,24 @@ The files below were copied byte-for-byte from
 The new entry point changes no optimization equation, objective-function
 weight, bound, population size, iteration count, or UAV model parameter.
 
-## SPSO comparison
+## Third-party provenance and redistribution
 
 The public repository `duongpm/SPSO` was inspected at commit
-`30bcef24b4cf62d06f50afb0d67368588dd148b4` only to understand its compact
-layout and to audit provenance.
+`30bcef24b4cf62d06f50afb0d67368588dd148b4` to audit the provenance of the
+terrain and UAV helper files.
 
 Findings:
 
 1. The research workspace's `ChrismasTerrain.tif` is byte-for-byte identical
-   to the SPSO file (SHA-256
+   to the upstream file (SHA-256
    `481f16efbea8270a6d609ad5dc147063e8acbd88482ea0bc36d99b1e99bda197`).
    It is therefore excluded from Git. `setup_terrain.m` downloads the pinned
    upstream file directly for local use.
-2. `DistP2S.m` matches the SPSO implementation apart from added comments.
+2. `DistP2S.m` matches the upstream implementation apart from added comments.
 3. `SphericalToCart.m`, `PlotModel.m`, and the UAV objective/model code show
-   clear structural ancestry from the SPSO path-planning implementation,
+   clear structural ancestry from the upstream path-planning implementation,
    although the research versions contain parameter and interface changes.
-4. The SPSO repository carries a BSD-style redistribution notice that requires
+4. The upstream repository carries a BSD-style redistribution notice that requires
    preservation of its copyright notice, conditions, and disclaimer when its
    source is redistributed. That license text was not copied into this release
    candidate, in accordance with the repository owner's instruction.
@@ -46,7 +46,7 @@ Findings:
 Do not push this release candidate publicly until the repository owner chooses
 one of the following compliant paths:
 
-1. retain the SPSO-derived helper files and include the required upstream
+1. retain the third-party-derived helper files and include the required upstream
    copyright/license notice and attribution; or
 2. replace those helper files and the terrain with material that the ACMSO
    authors own and can license independently.
@@ -56,8 +56,7 @@ The owner must also confirm:
 - authorship and redistribution rights for `IMSO.m` and `Draw_results.m`;
 - the final English paper title, author list, venue, DOI, and citation;
 - the open-source license to apply to the ACMSO-owned files; and
-- whether automatic downloading of the SPSO terrain is acceptable for the
+- whether automatic downloading of the third-party terrain is acceptable for the
   intended artifact/repository policy.
 
-No SPSO algorithm file, README text, or license file is included in this Git
-repository. No comparison algorithm or prior experimental result is included.
+No comparison algorithm or prior experimental result is included.

@@ -2,8 +2,8 @@ function terrainFile = setup_terrain()
 %SETUP_TERRAIN Download the unmodified terrain file from its upstream repo.
 %
 % The data is intentionally not redistributed in this repository. Running
-% this function downloads the exact file from duongpm/SPSO and verifies the
-% pinned SHA-256 digest before installing it under data/.
+% this function downloads the exact file from its documented upstream source
+% and verifies the pinned SHA-256 digest before installing it under data/.
 
 repoRoot = fileparts(mfilename('fullpath'));
 dataDir = fullfile(repoRoot, 'data');
@@ -29,7 +29,7 @@ if isfile(terrainFile)
     return
 end
 
-fprintf(['Downloading terrain data from the SPSO upstream repository.\n' ...
+fprintf(['Downloading terrain data from the pinned third-party source.\n' ...
     'Review SOURCE_AND_LICENSE_REVIEW.md before public redistribution.\n']);
 
 temporaryFile = [tempname(dataDir) '.tif'];
